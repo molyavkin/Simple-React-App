@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    
+    
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link href="./HTTP методы_files/css" rel="stylesheet">
+    <title>HTTP методы</title>
+  <script defer="" src="./HTTP методы_files/bundle.js.download"></script><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>* {
+  font-family: 'Rubik', sans-serif;
+  color: #151616;
+}
+
+.container {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 
+          "h h h "
+          "m m s"
+          "f f f";
+}
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0NBQWdDO0VBQ2hDLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCxhQUFhO0VBQ2I7OztpQkFHZTtBQUNqQjs7OztBQUlBO0VBQ0UsY0FBYztFQUNkLG9CQUFvQjtBQUN0Qjs7O0FBR0E7RUFDRSx5QkFBeUI7RUFDekIsaUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2Qiw2QkFBNkI7RUFDN0IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFO0lBQ0UsdUJBQXVCO0VBQ3pCO0VBQ0E7SUFDRSx5QkFBeUI7RUFDM0I7QUFDRiIsInNvdXJjZXNDb250ZW50IjpbIioge1xuICBmb250LWZhbWlseTogJ1J1YmlrJywgc2Fucy1zZXJpZjtcbiAgY29sb3I6ICMxNTE2MTY7XG59XG5cbi5jb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIG1heC13aWR0aDogMTIwMHB4O1xuICBtYXJnaW46IDAgYXV0bztcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1hcmVhczogXG4gICAgICAgICAgXCJoIGggaCBcIlxuICAgICAgICAgIFwibSBtIHNcIlxuICAgICAgICAgIFwiZiBmIGZcIjtcbn1cblxuXG5cbi5BcHAtbG9nbyB7XG4gIGhlaWdodDogNDB2bWluO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cblxuXG4uQXBwLWhlYWRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmNWY3ZmE7XG4gIG1pbi1oZWlnaHQ6IDEwMHZoO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZm9udC1zaXplOiBjYWxjKDEwcHggKyAydm1pbik7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLkFwcC1saW5rIHtcbiAgY29sb3I6ICM2MWRhZmI7XG59XG5cbkBrZXlmcmFtZXMgQXBwLWxvZ28tc3BpbiB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICB9XG4gIHRvIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.Footer-site-footer {
+    font-family: 'Rubik', sans-serif;
+    border: 1px solid rgb(61, 61, 61);
+    padding: 10px;
+    margin: 5px;
+    color: rgb(89, 107, 102);
+    background-color: rgb(177, 167, 231);
+}
+.Footer-site-footer {
+    grid-area: f;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0Zvb3Rlci9Gb290ZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0NBQWdDO0lBQ2hDLGlDQUFpQztJQUNqQyxhQUFhO0lBQ2IsV0FBVztJQUNYLHdCQUF3QjtJQUN4QixvQ0FBb0M7QUFDeEM7QUFDQTtJQUNJLFlBQVk7QUFDaEIiLCJzb3VyY2VzQ29udGVudCI6WyIuRm9vdGVyLXNpdGUtZm9vdGVyIHtcclxuICAgIGZvbnQtZmFtaWx5OiAnUnViaWsnLCBzYW5zLXNlcmlmO1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgcmdiKDYxLCA2MSwgNjEpO1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICAgIG1hcmdpbjogNXB4O1xyXG4gICAgY29sb3I6IHJnYig4OSwgMTA3LCAxMDIpO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDE3NywgMTY3LCAyMzEpO1xyXG59XHJcbi5Gb290ZXItc2l0ZS1mb290ZXIge1xyXG4gICAgZ3JpZC1hcmVhOiBmO1xyXG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.Header-site-header {
+    font-family: 'Rubik', sans-serif;
+    border: 1px solid rgb(61, 61, 61);
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(70, 23, 143);
+
+}
+.Header-site-header {
+    grid-area: h;
+}
+
+.TextHead {
+    color:beige;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0hlYWRlci9IZWFkZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0NBQWdDO0lBQ2hDLGlDQUFpQztJQUNqQyxhQUFhO0lBQ2IsV0FBVztJQUNYLGtDQUFrQzs7QUFFdEM7QUFDQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxXQUFXO0FBQ2YiLCJzb3VyY2VzQ29udGVudCI6WyIuSGVhZGVyLXNpdGUtaGVhZGVyIHtcclxuICAgIGZvbnQtZmFtaWx5OiAnUnViaWsnLCBzYW5zLXNlcmlmO1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgcmdiKDYxLCA2MSwgNjEpO1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICAgIG1hcmdpbjogNXB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDcwLCAyMywgMTQzKTtcclxuXHJcbn1cclxuLkhlYWRlci1zaXRlLWhlYWRlciB7XHJcbiAgICBncmlkLWFyZWE6IGg7XHJcbn1cclxuXHJcbi5UZXh0SGVhZCB7XHJcbiAgICBjb2xvcjpiZWlnZTtcclxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.Main {
+    
+    border: 1px solid rgb(61, 61, 61);
+    padding: 10px;
+    margin: 5px;
+}
+.Main {
+    grid-area: m;
+}
+section {
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+}
+.TextBody {
+    color: rgb(38, 38, 38);
+    font-size: 1.4em;
+}
+
+.TextHeader {
+    color: rgb(5, 14, 53);
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL01haW4vTWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksaUNBQWlDO0lBQ2pDLGFBQWE7SUFDYixXQUFXO0FBQ2Y7QUFDQTtJQUNJLFlBQVk7QUFDaEI7QUFDQTtJQUNJLGFBQWE7SUFDYixXQUFXO0lBQ1gsZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxzQkFBc0I7SUFDdEIsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0kscUJBQXFCO0FBQ3pCIiwic291cmNlc0NvbnRlbnQiOlsiLk1haW4ge1xyXG4gICAgXHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCByZ2IoNjEsIDYxLCA2MSk7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgbWFyZ2luOiA1cHg7XHJcbn1cclxuLk1haW4ge1xyXG4gICAgZ3JpZC1hcmVhOiBtO1xyXG59XHJcbnNlY3Rpb24ge1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICAgIG1hcmdpbjogNXB4O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufVxyXG4uVGV4dEJvZHkge1xyXG4gICAgY29sb3I6IHJnYigzOCwgMzgsIDM4KTtcclxuICAgIGZvbnQtc2l6ZTogMS40ZW07XHJcbn1cclxuXHJcbi5UZXh0SGVhZGVyIHtcclxuICAgIGNvbG9yOiByZ2IoNSwgMTQsIDUzKTtcclxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.Sidebar {
+    
+    border: 1px solid rgb(61, 61, 61);
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(15, 91, 180);
+    color: aliceblue;
+    
+}
+.Sidebar {
+    grid-area: s;
+}
+.Sidebar ul {
+    padding-left: 0;
+    
+}
+
+.Sidebar ul li {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 18px;
+    min-height: 100%;
+    
+
+}
+.ItemsList ul {
+    height: 100%;
+    /*растянуть список на высоту его родителя и флексом растянуть его потомков*/
+    display:flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    
+}
+
+.Space {
+    width: 50px;
+    height: 80px;
+}
+
+.LinksSpace {
+    width: 50px;
+    height: 30px;
+    
+
+}
+.TextColor {
+    color:whitesmoke;
+}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL1NpZGViYXIvU2lkZWJhci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksaUNBQWlDO0lBQ2pDLGFBQWE7SUFDYixXQUFXO0lBQ1gsa0NBQWtDO0lBQ2xDLGdCQUFnQjs7QUFFcEI7QUFDQTtJQUNJLFlBQVk7QUFDaEI7QUFDQTtJQUNJLGVBQWU7O0FBRW5COztBQUVBO0lBQ0kscUJBQXFCO0lBQ3JCLGVBQWU7SUFDZixlQUFlO0lBQ2YsZ0JBQWdCOzs7QUFHcEI7QUFDQTtJQUNJLFlBQVk7SUFDWiwyRUFBMkU7SUFDM0UsWUFBWTtJQUNaLDhCQUE4QjtJQUM5QixnQkFBZ0I7SUFDaEIsU0FBUzs7QUFFYjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksV0FBVztJQUNYLFlBQVk7OztBQUdoQjtBQUNBO0lBQ0ksZ0JBQWdCO0FBQ3BCIiwic291cmNlc0NvbnRlbnQiOlsiLlNpZGViYXIge1xyXG4gICAgXHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCByZ2IoNjEsIDYxLCA2MSk7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgbWFyZ2luOiA1cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTUsIDkxLCAxODApO1xyXG4gICAgY29sb3I6IGFsaWNlYmx1ZTtcclxuICAgIFxyXG59XHJcbi5TaWRlYmFyIHtcclxuICAgIGdyaWQtYXJlYTogcztcclxufVxyXG4uU2lkZWJhciB1bCB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDA7XHJcbiAgICBcclxufVxyXG5cclxuLlNpZGViYXIgdWwgbGkge1xyXG4gICAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xyXG4gICAgcGFkZGluZy1sZWZ0OiAwO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgbWluLWhlaWdodDogMTAwJTtcclxuICAgIFxyXG5cclxufVxyXG4uSXRlbXNMaXN0IHVsIHtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIC8q0YDQsNGB0YLRj9C90YPRgtGMINGB0L/QuNGB0L7QuiDQvdCwINCy0YvRgdC+0YLRgyDQtdCz0L4g0YDQvtC00LjRgtC10LvRjyDQuCDRhNC70LXQutGB0L7QvCDRgNCw0YHRgtGP0L3Rg9GC0Ywg0LXQs9C+INC/0L7RgtC+0LzQutC+0LIqL1xyXG4gICAgZGlzcGxheTpmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgbGlzdC1zdHlsZTogbm9uZTtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIFxyXG59XHJcblxyXG4uU3BhY2Uge1xyXG4gICAgd2lkdGg6IDUwcHg7XHJcbiAgICBoZWlnaHQ6IDgwcHg7XHJcbn1cclxuXHJcbi5MaW5rc1NwYWNlIHtcclxuICAgIHdpZHRoOiA1MHB4O1xyXG4gICAgaGVpZ2h0OiAzMHB4O1xyXG4gICAgXHJcblxyXG59XHJcbi5UZXh0Q29sb3Ige1xyXG4gICAgY29sb3I6d2hpdGVzbW9rZTtcclxufVxyXG5cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="container"><div class="Header-site-header"><h1 class="TextHead">HTTP методы</h1></div><div class="Main"><section class="TextColor"><h2 class="TextHeader">GET</h2><div class="TextBody">Используется для запроса содержимого указанного ресурса. С помощью метода GET можно также начать какой-либо процесс. В этом случае в тело ответного сообщения следует включить информацию о ходе выполнения процесса. Клиент может передавать параметры выполнения запроса в URI целевого ресурса после символа «?»: GET /path/resource?param1=value1&amp;param2=value2 HTTP/1.1 Согласно стандарту HTTP, запросы типа GET считаются идемпотентными. Кроме обычного метода GET, различают ещё Условный GET — содержит заголовки If-Modified-Since, If-Match, If-Range и подобные; Частичный GET — содержит в запросе Range. Порядок выполнения подобных запросов определён стандартами отдельно. </div></section><section class="TextColor"><h2 class="TextHeader">POST</h2><div class="TextBody">Применяется для передачи пользовательских данных заданному ресурсу. Например, в блогах посетители обычно могут вводить свои комментарии к записям в HTML-форму, после чего они передаются серверу методом POST и он помещает их на страницу. При этом передаваемые данные (в примере с блогами — текст комментария) включаются в тело запроса. Аналогично с помощью метода POST обычно загружаются файлы на сервер. В отличие от метода GET, метод POST не считается идемпотентным, то есть многократное повторение одних и тех же запросов POST может возвращать разные результаты (например, после каждой отправки комментария будет появляться очередная копия этого комментария). При результате выполнения 200 (Ok) в тело ответа следует включить сообщение об итоге выполнения запроса. Если был создан ресурс, то серверу следует вернуть ответ 201 (Created) с указанием URI нового ресурса в заголовке Location. Сообщение ответа сервера на выполнение метода POST не кэшируется. </div></section><section class="TextColor"><h2 class="TextHeader">PUT</h2><div class="TextBody">Применяется для загрузки содержимого запроса на указанный в запросе URI. Если по заданному URI не существует ресурса, то сервер создаёт его и возвращает статус 201 (Created). Если же ресурс был изменён, то сервер возвращает 200 (Ok) или 204 (No Content). Сервер не должен игнорировать некорректные заголовки Content-*, передаваемые клиентом вместе с сообщением. Если какой-то из этих заголовков не может быть распознан или недопустим при текущих условиях, то необходимо вернуть код ошибки 501 (Not Implemented). Фундаментальное различие методов POST и PUT заключается в понимании предназначений URI ресурсов. Метод POST предполагает, что по указанному URI будет производиться обработка передаваемого клиентом содержимого. Используя PUT, клиент предполагает, что загружаемое содержимое соответствует находящемуся по данному URI ресурсу. Сообщения ответов сервера на метод PUT не кэшируются. </div></section><section class="TextColor"><h2 class="TextHeader">DELETE</h2><div class="TextBody">Удаляет указанный ресурс.</div></section></div><div class="Footer-site-footer"><b>React</b><p>2022</p></div><div class="Sidebar"><nav><h2 class="TextColor">ссылки:</h2><ul><li><div class="LinksSpace"></div><a href="https://ru.wikipedia.org/wiki/HTTP#GET">GET</a><div class="Space"></div></li><li><div class="LinksSpace"></div><a href="https://ru.wikipedia.org/wiki/HTTP#POST">POST</a><div class="Space"></div></li><li><div class="LinksSpace"></div><a href="https://ru.wikipedia.org/wiki/HTTP#PUT">PUT</a><div class="Space"></div></li><li><div class="LinksSpace"></div><a href="https://ru.wikipedia.org/wiki/HTTP#DELETE">DELETE</a><div class="Space"></div></li></ul></nav></div></div></div>
+    
+  
+
+</body></html>
